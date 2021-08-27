@@ -1,0 +1,104 @@
+*{
+    margin: 0px;
+    overflow-x: hidden;
+}
+
+.header{
+    width:100%;
+    height: 100px;
+    background-color: orange;
+    overflow-y: hidden;
+}
+
+.home{
+    position: relative;
+    left: 50px;
+    top:35px
+}
+
+.about{
+    position: relative;
+    left: 180px;
+    top:7px;
+}
+
+.validate{
+    position: relative;
+    left: 340px;
+    bottom: 20px;
+}
+
+a{
+    color: black;
+    text-decoration: none;
+}
+
+.btn-validate{
+    width: 300px;
+    height: 100px;
+    font-size: 30px;
+    text-align: bold;
+    background-color:aqua;
+    border-radius: 30px;
+}
+
+.upload_btn{
+    width: 200px;
+    height: 50px;
+    background-color: cadetblue;
+    border-radius: 10px;
+    font-size: 20px;
+}
+
+.results{
+    position: relative;
+    left: 500px;
+    bottom: 45px;
+}
+
+.med1{
+    position: relative;
+    left:200px
+}
+
+.con1{
+    position: relative;
+    left: 240px;
+}
+
+.med2{
+    position: relative;
+    left:200px
+}
+
+.con2{
+    position: relative;
+    left: 240px;   
+}
+
+.med3{
+    position: relative;
+    left:200px
+}
+
+.con3{
+    position: relative;
+    left: 240px;
+}
+
+.madhav_bhaiya{
+    border-radius: 100%;
+    position: relative;
+    left: 200px;
+}
+
+.eklavya{
+    border-radius: 80%;
+    position: relative;
+    left: 1200px;
+}
+
+.names_classes{
+    position: relative;
+    bottom: 170px;
+}

@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Validate Your Page</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="shortcut icon" href="logo.jpg" type="image/x-icon">
+  </head>
+  <body>
+
+    <div class="header">
+
+        <a href="home.html"><h2 class="home">HOME</h2></a>
+    
+        <a href="aboutus.html"><h2 class="about">About Us</h2></a>
+    
+        <a href="validate.html"><h2 class="validate">Validate</h2></a>
+
+        <a href="results.html"><h2 class="results">Results</h2></a>
+    </div>
+
+    <br><br><br><br>
+
+<center><h1>Welcome To The Prescription Validator</h1></center>
+
+
+<br><br><br><br>
+
+<center><h1>With Just Few Clicks You Can Validate Your Prescription!</h1></center>
+
+<br><br><br>
+
+<center><input type="file" id="image" />
+<button class="upload_btn" onclick="uploadImage()">Upload Image</button></center>
+
+<script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-app.js"></script>
+<script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-storage.js"></script>
+
+<script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-analytics.js"></script>
+
+<script>
+
+  var firebaseConfig = {
+    apiKey: "AIzaSyCKaEI93ls0RNfZibL6FLflM-3ApyIFiuU",
+    authDomain: "drugverification.firebaseapp.com",
+    projectId: "drugverification",
+    storageBucket: "drugverification.appspot.com",
+    messagingSenderId: "869101303374",
+    appId: "1:869101303374:web:bd66b976d04b344ba7b51f",
+    measurementId: "G-R7JTKZ0PFM"
+  };
+
+  firebase.initializeApp(firebaseConfig);
+  firebase.analytics();
+  console.log(firebase);
+  function uploadImage() {
+      const ref = firebase.storage().ref();
+      const file = document.querySelector("#image").files[0];
+
+      const task = ref.child(file.name).put(file);
+      task
+        .then(snapshot => snapshot.ref.getDownloadURL())
+        .then(url => {
+          alert("Uploaded");
+        })
+        .catch(console.error);
+    }
+
+  </script>
+
+</body>
+
+</html>
